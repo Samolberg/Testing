@@ -1,3 +1,4 @@
+
 describe('Address Book', function() {
         var addressBook = new AddressBook();
             thisContact = new Contact();
@@ -18,3 +19,12 @@ describe('Address Book', function() {
     });
 
 });
+
+describe('Async Address Book', function() {
+    it('should grab initial contacts', function() {
+        var addressBook = new AddressBook();
+
+        addressBook.getInitialContacts();
+        expect(addressBook.initialComplete).toBe(true);
+    })
+})
